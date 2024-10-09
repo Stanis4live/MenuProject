@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Test</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'menu/css/style.css' %}">
+</head>
+<body>
+
+{% load menu_tags %}
+
+<h1>First Menu</h1>
+<ul>
+    {% draw_menu 'DNS' as first_menu_tree %}
+    {% include "menu.html" with menu_tree=first_menu_tree %}
+</ul>
+
+<h1>Second Menu</h1>
+<ul>
+    {% draw_menu 'Mango' as second_menu_tree %}
+    {% include "menu.html" with menu_tree=second_menu_tree %}
+</ul>
+
+</body>
+</html>
+
+

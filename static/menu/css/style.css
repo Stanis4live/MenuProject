@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+li.active > a {
+    color: #007bff;
+}
+
+ul ul {
+    margin-left: 20px;
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+}
